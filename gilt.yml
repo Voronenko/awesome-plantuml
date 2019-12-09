@@ -1,0 +1,30 @@
+  - git: git@github.com:milo-minderbinder/AWS-PlantUML.git
+    version: master
+    files:
+      - src: examples/*
+        dst: aws/
+  - git: git@github.com:awslabs/aws-icons-for-plantuml.git
+    version: master
+    files:
+      - src: examples/*
+        dst: awslib/
+  - git: git@github.com:RicardoNiepel/Azure-PlantUML.git
+    version: master
+    files:
+      - src: samples/*
+        dst: azure/
+  - git: git@github.com:RicardoNiepel/C4-PlantUML.git
+    version: master
+    files:
+      - src: samples/*
+        dst: c4/
+  - git: git@github.com:Crashedmind/PlantUML-opensecurityarchitecture-icons.git
+    version: master
+    files:
+      - src: all.puml
+        dst: osa/
+  - git: git@github.com:tupadr3/plantuml-icon-font-sprites.git
+    version: master
+    files:
+      - src: examples/*
+        dst: tupadr3/

@@ -1,0 +1,22 @@
+@startuml Raw usage - Sprites
+!pragma revision 1
+
+!define AzurePuml https://raw.githubusercontent.com/RicardoNiepel/Azure-PlantUML/master/dist
+!includeurl AzurePuml/AzureRaw.puml
+!includeurl AzurePuml/Databases/AzureCosmosDb.puml
+!includeurl AzurePuml/Compute/AzureFunction.puml
+
+
+component "<color:red><$AzureFunction></color>" as myFunction
+
+database "<color:#0072C6><$AzureCosmosDb></color>" as myCosmosDb
+
+AzureFunction(mySecondFunction, "Stream Processing", "Consumption")
+
+rectangle "<color:AZURE_SYMBOL_COLOR><$AzureCosmosDb></color>" as mySecondCosmosDb
+
+myFunction --> myCosmosDb
+
+mySecondFunction --> mySecondCosmosDb
+
+@enduml

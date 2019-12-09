@@ -1,0 +1,17 @@
+@startuml
+
+!define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/17-10-18/dist
+
+!includeurl AWSPUML/common.puml
+!includeurl AWSPUML/Storage/AmazonS3/AmazonS3.puml
+!includeurl AWSPUML/Storage/AmazonS3/bucket/bucket.puml
+
+
+AMAZONS3(s3) {
+    BUCKET(site,www.insecurity.co)
+    BUCKET(logs,logs.insecurity.co)
+}
+
+site .r.> logs : events
+
+@enduml
